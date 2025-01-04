@@ -7,6 +7,11 @@ use pump_webhook::{
 };
 use rocket::serde::json::Json;
 
+#[get("/")]
+fn index() -> &'static str {
+    "Hello, I am just a bot!"
+}
+
 #[post("/webhook", format = "json", data = "<payload>")]
 async fn process(payload: Json<Payload>) -> Result<String, WebHookError> {
     // Process the payload here
@@ -80,7 +85,7 @@ async fn process(payload: Json<Payload>) -> Result<String, WebHookError> {
                 );
             } else {
                 message = format!(
-                    "new mint graduated {} failed to fetch price and other metadata",
+                    "New Graduated Token {} failed to fetch price and other metadata",
                     &transaction.accounts.mint
                 );
             }
@@ -122,5 +127,5 @@ async fn process(payload: Json<Payload>) -> Result<String, WebHookError> {
 #[launch]
 fn rocket() -> _ {
     dotenv().ok();
-    rocket::build().mount("/", routes![process])
+    rocket::build().mount("/", routes![index, process])
 }
