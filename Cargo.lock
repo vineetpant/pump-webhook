@@ -2036,6 +2036,7 @@ dependencies = [
  "anchor-lang",
  "dotenv",
  "lazy_static",
+ "log",
  "reqwest",
  "rocket",
  "serde",

@@ -85,7 +85,7 @@ async fn process(payload: Json<Payload>) -> Result<String, WebHookError> {
                 );
             } else {
                 message = format!(
-                    "New Graduated Token {} failed to fetch price and other metadata",
+                    "New Graduated Token {}",
                     &transaction.accounts.mint
                 );
             }

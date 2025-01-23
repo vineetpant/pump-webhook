@@ -7,6 +7,7 @@ edition = "2021"
 anchor-lang = "0.30.1"
 dotenv = "0.15.0"
 lazy_static = "1.5.0"
+log = "0.4.22"
 reqwest = { version = "0.11", features = ["json"] }
 rocket = { version = "0.5.0-rc.1", features = ["json"] }
 serde = { version = "1.0", features = ["derive"] } 

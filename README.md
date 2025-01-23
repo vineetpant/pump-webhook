@@ -1,6 +1,14 @@
-# Project Name
+# Pump.fun telegram bot
 
-A brief description of the project.
+This is the webhook to receive notification from stream whenever some pump fun token graduates and migrated to Raydium, Please read the medium post to understand the whole flow:-
+
+[Link to Medium Post](https://medium.com/@viny.pant88/telegram-bot-to-track-token-migration-from-pump-fun-2d788b115bb7)
+
+## Telegram bot handle 
+
+Please join following telegram bot handle to receive all token migration events 
+
+`@pumpfun_migration_bot`
 
 ## Table of Contents
 
@@ -20,10 +28,6 @@ A brief description of the project.
 ## Usage
 
 This Rust project implements webhook to listen for messages regarding token migration from pump.fun to Raydium, it calls APIs to get price and metadata of tokens then forwards the message to telegram bot.
-
-## Contributing
-
-Contributions are welcome! Please follow the guidelines in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
